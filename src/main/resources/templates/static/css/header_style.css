@@ -1,0 +1,16 @@
+.main-logo{
+    text-decoration:none;
+    color: white;
+}
+.main-logo:hover{
+    color: #c65d23;
+}
+.main{
+    min-height:600px;
+}
+.add-item{
+    text-align:center;
+}
+footer{
+    margin-top:100px;
+}

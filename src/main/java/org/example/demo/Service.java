@@ -18,14 +18,16 @@ public class Service {
     private Double cost;
     private int warranty;
     private int workTime;
+    private String image;
 
     public Service() {
     }
 
-    public Service(String name, Double cost, int warranty, int workTime) {
+    public Service(String name, Double cost, int warranty, int workTime,String image) {
         this.name = name;
         this.cost = cost;
         this.warranty = warranty;
         this.workTime = workTime;
+        this.image = image;
     }
 }

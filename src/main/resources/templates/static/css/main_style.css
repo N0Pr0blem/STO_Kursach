@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+}
+
+nav {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+}
+.main-add{
+    text-align:center;
+    padding:50px;
+}
+.main-add img{
+    width:80%;
+    border-radius: 20px;
+}
+h1{
+    text-align:center;
+}
+span{
+    white-space: pre;
+}
+.card{
+    padding:30px;
+}
