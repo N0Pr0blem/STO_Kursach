@@ -1,27 +1,6 @@
 body {
     font-family: Arial, sans-serif;
 }
-
-header {
-    background-color: #343a40;
-    color: white;
-    padding: 10px 0;
-}
-
-nav {
-    background-color: #f8f9fa;
-    padding: 10px 0;
-}
-
-.navbar-nav {
-    margin-left: auto;
-}
-
-footer {
-    background-color: #343a40;
-    color: white;
-    padding: 10px 0;
-}
 .main-add{
     text-align:center;
     padding:50px;

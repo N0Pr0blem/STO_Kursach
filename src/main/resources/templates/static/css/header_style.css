@@ -11,6 +11,24 @@
 .add-item{
     text-align:center;
 }
-footer{
+.main-header{
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+}
+
+nav {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
     margin-top:100px;
 }
