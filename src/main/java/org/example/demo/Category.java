@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -16,6 +17,12 @@ public class Category {
     private String name;
     @ManyToMany
     @JoinTable(name = "category_service", joinColumns = @JoinColumn(name = "category_id"), inverseJoinColumns = @JoinColumn(name = "service_id"))
-    private Set<Service> services;
+    private List<Job> jobs;
     private String path;
+
+    public Category() {
+    }
+    public Category(String name) {
+        this.name = name;
+    }
 }

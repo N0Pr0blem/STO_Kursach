@@ -1,16 +1,13 @@
 package org.example.demo;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
 @Entity
-public class Service {
+public class Job {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -19,15 +16,18 @@ public class Service {
     private int warranty;
     private int workTime;
     private String image;
+    @Column(name = "is_checked", columnDefinition = "BOOLEAN DEFAULT false")
+    private boolean isChecked;
 
-    public Service() {
+    public Job() {
     }
 
-    public Service(String name, Double cost, int warranty, int workTime,String image) {
+    public Job(String name, Double cost, int warranty, int workTime, String image,boolean isChecked) {
         this.name = name;
         this.cost = cost;
         this.warranty = warranty;
         this.workTime = workTime;
         this.image = image;
+        this.isChecked = isChecked;
     }
 }

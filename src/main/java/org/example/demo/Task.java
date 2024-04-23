@@ -14,7 +14,7 @@ public class Task {
     @OneToOne
     private Owner owner;
     @OneToOne
-    private Service service;
+    private Job service;
 
     public Task() {
     }
