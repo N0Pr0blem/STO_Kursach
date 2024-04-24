@@ -114,7 +114,7 @@ public class AdminController {
             @PathVariable Category category,
             Model model) {
         categoryService.edit(category, selectedJobs);
-        return "redirect:/admin/category/add";
+        return "redirect:/admin/category";
     }
 
     @PostMapping("/category/{category}/delete")

@@ -22,19 +22,19 @@
     </div>
     <div th:each="owner:${owners}" class="row">
         <div class="col-md-3">
-            <h5 th:text="${owner.name}"></h5>
+            <div th:text="${owner.name}"></div>
         </div>
         <div class="col-md-3">
-            <h5 th:text="${owner.phone}"></h5>
+            <div th:text="${owner.phone}"></div>
         </div>
         <div class="col-md-3">
             <div th:each="car:${owner.cars}">
-                <h5 th:text="${car.number}"></h5>
+                <div th:text="${car.number}"></div>
             </div>
         </div>
         <div class="col-md-3">
             <div th:each="job:${owner.jobs}">
-                <h5 th:text="${job.name}"></h5>
+                <div th:text="${job.name}"></div>
             </div>
         </div>
     </div>

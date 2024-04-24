@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddd14e17-0cf5-48e4-9749-be59b42d0655" name="Changes" comment="edit categories and jobs, output all tasks">
+    <list default="true" id="ddd14e17-0cf5-48e4-9749-be59b42d0655" name="Changes" comment="mvp">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/Category.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/CategoryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin_category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin_category_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin_category_edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin_job.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin_job.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin_job_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin_job_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin_history.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin_history.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/static/css/admin_page_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/static/css/admin_page_style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/static/css/main_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/static/css/main_style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -169,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713972417712</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="mvp">
+      <option name="closed" value="true" />
+      <created>1713977006307</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1713977006307</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -180,6 +186,7 @@
     <MESSAGE value="Create services" />
     <MESSAGE value="Category and jobs creating" />
     <MESSAGE value="edit categories and jobs, output all tasks" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit categories and jobs, output all tasks" />
+    <MESSAGE value="mvp" />
+    <option name="LAST_COMMIT_MESSAGE" value="mvp" />
   </component>
 </project>

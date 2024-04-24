@@ -61,16 +61,9 @@ public class CategoryService {
     }
 
     public void edit(Category category, List<Job> selectedJobs) {
-        for(Job job:selectedJobs)
-            if(!category.getJobs().contains(job)) {
-                job.setChecked(true);
-                category.getJobs().add(job);
-            }
-        for(Job job:category.getJobs())
-            if(!selectedJobs.contains(job)) {
-                job.setChecked(false);
-                category.getJobs().remove(job);
-            }
+        category.setJobsChecked(false);
+        category.setJobs(selectedJobs);
+        category.setJobsChecked(true);
         categoryRepo.save(category);
     }
 }

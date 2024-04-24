@@ -26,8 +26,8 @@
     <h3 th:text="${message}"></h3>
     <div th:each="category:${categories}">
         <div class="row my-container">
-            <div class="col-md-2"><h4 th:text="${category.name}"></h4></div>
-            <div class="col-md-2"><h4 th:text="${category.path}"></h4></div>
+            <div class="col-md-2" th:text="${category.name}"></div>
+            <div class="col-md-2" th:text="${category.path}"></div>
             <div class="col-md-2 form-container">
                 <form th:action="@{'/admin/category/'+${category.id}+'/edit'}" method="get">
                     <button type="submit" class="btn btn-outline-info">Изменить</button>
