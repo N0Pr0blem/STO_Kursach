@@ -101,6 +101,21 @@ public class AdminController {
         categoryService.add(category, selectedJobs);
         return "redirect:/admin/category/add";
     }
+    @GetMapping("/category/{category}/edit")
+    public String categoryEditPage(@PathVariable Category category,Model model) {
+        model.addAttribute("jobs", jobService.getAllUnChecked());
+        model.addAttribute("category", category);
+        return "admin_category_edit";
+    }
+
+    @PostMapping("/category/{category}/edit")
+    public String categoryEdit(
+            @RequestParam("categoryJobs") List<Job> selectedJobs,
+            @PathVariable Category category,
+            Model model) {
+        categoryService.edit(category, selectedJobs);
+        return "redirect:/admin/category/add";
+    }
 
     @PostMapping("/category/{category}/delete")
     public String categoryDelete(@PathVariable Category category, Model model) {

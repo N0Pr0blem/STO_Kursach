@@ -15,7 +15,7 @@
 <div class="container py-4 main">
     <form th:action="@{'/admin/service/'+${job.id}+'/edit'}" method="post"
           style="width:500px;height:100px;margin-left: auto; margin-right: auto;text-align:center;">
-        <h1 class="h3 mb-3 fw-normal">Новая услуга</h1>
+        <h1 class="h3 mb-3 fw-normal">Изменить услугу</h1>
 
         <div class="form-floating">
             <input type="text" name="name" th:value="${job.name}" class="form-control" placeholder="Name">
@@ -44,7 +44,7 @@
         </div>
         <input type="text" name="isChecked" th:value="${job.isChecked}" style="display:none">
         <br>
-        <button class="btn btn-outline-dark w-100 py-2" type="submit">Добавить</button>
+        <button class="btn btn-outline-dark w-100 py-2" type="submit">Изменить</button>
     </form>
 </div>
 <div th:insert="blocks/footer :: footer"></div>

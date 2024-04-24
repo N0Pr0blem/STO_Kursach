@@ -29,7 +29,7 @@
             <div class="col-md-2"><h4 th:text="${category.name}"></h4></div>
             <div class="col-md-2"><h4 th:text="${category.path}"></h4></div>
             <div class="col-md-2 form-container">
-                <form th:action="@{'/admin/category/'+${category.id}+'/edit'}" method="post">
+                <form th:action="@{'/admin/category/'+${category.id}+'/edit'}" method="get">
                     <button type="submit" class="btn btn-outline-info">Изменить</button>
                 </form>
                 <form th:action="@{'/admin/category/'+${category.id}+'/delete'}" method="post">

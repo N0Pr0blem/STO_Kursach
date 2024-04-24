@@ -33,7 +33,7 @@
             <div class="col-md-2" th:text="${job.cost}"><h4>Цена</h4></div>
             <div class="col-md-2" th:text="${job.warranty}"><h4>Гарантия</h4></div>
             <div class="col-md-2" th:text="${job.workTime}"><h4>Время работы</h4></div>
-            <div class="col-md-2" th:text="${job.image}"><h4>Картинка</h4></div>
+            <div class="col-md-2 link-column" th:text="${job.image}"><h4>Картинка</h4></div>
             <div class="col-md-2 form-container">
                 <form th:action="@{'/admin/service/'+${job.id}+'/edit'}" method="get">
                     <button type="submit" class="btn btn-outline-info">Изменить</button>

@@ -32,6 +32,7 @@ public class CategoryService {
     }
 
     public void delete(Category category) {
+        for(Job job : category.getJobs()) job.setChecked(false);
         categoryRepo.delete(category);
     }
 
@@ -57,5 +58,19 @@ public class CategoryService {
             if(category.getJobs().contains(job))
                 res.add(category);
         return res;
+    }
+
+    public void edit(Category category, List<Job> selectedJobs) {
+        for(Job job:selectedJobs)
+            if(!category.getJobs().contains(job)) {
+                job.setChecked(true);
+                category.getJobs().add(job);
+            }
+        for(Job job:category.getJobs())
+            if(!selectedJobs.contains(job)) {
+                job.setChecked(false);
+                category.getJobs().remove(job);
+            }
+        categoryRepo.save(category);
     }
 }

@@ -32,10 +32,10 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <span th:text="${job.name}"></span><br>
-                            <span th:text="'Гарантия '+${job.warranty}+' дн.'"></span>
-                            <span th:text="'Время '+${job.workTime}+' ч.'"></span>
-                            <span th:text="'Цена '+${job.cost}+'BYN'"></span>
+                            <b th:text="${job.name}"></b>
+                            <i th:text="'Гарантия '+${job.warranty}+' дн.'"></i><br>
+                            <i th:text="'Время '+${job.workTime}+' ч.'"></i><br>
+                            <i th:text="'Цена '+${job.cost}+' BYN'"></i>
                         </div>
                         <form th:action="@{'/task/'+${job.id}}" method="get">
                             <button class="btn btn-success" type="submit">Заказать</button>
