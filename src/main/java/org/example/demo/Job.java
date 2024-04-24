@@ -17,7 +17,7 @@ public class Job {
     private int workTime;
     private String image;
     @Column(name = "is_checked", columnDefinition = "BOOLEAN DEFAULT false")
-    private boolean isChecked;
+        private boolean isChecked;
 
     public Job() {
     }

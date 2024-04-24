@@ -28,7 +28,7 @@
         <div class="row my-container">
             <div class="col-md-2"><h4 th:text="${category.name}"></h4></div>
             <div class="col-md-2"><h4 th:text="${category.path}"></h4></div>
-            <div class="col-md-2">
+            <div class="col-md-2 form-container">
                 <form th:action="@{'/admin/category/'+${category.id}+'/edit'}" method="post">
                     <button type="submit" class="btn btn-outline-info">Изменить</button>
                 </form>

@@ -13,7 +13,31 @@
 <div th:replace="blocks/admin_panel :: adminPanel(num='3')"></div>
 
 <div class="container py-4 main">
-    <h1>Добро пожаловать</h1>
+    <h1>История</h1>
+    <div class="row">
+        <div class="col-md-3"><h4>Имя заказчика</h4></div>
+        <div class="col-md-3"><h4>Телефон заказчика</h4></div>
+        <div class="col-md-3"><h4>Номер машины</h4></div>
+        <div class="col-md-3"><h4>Услуга</h4></div>
+    </div>
+    <div th:each="owner:${owners}" class="row">
+        <div class="col-md-3">
+            <h5 th:text="${owner.name}"></h5>
+        </div>
+        <div class="col-md-3">
+            <h5 th:text="${owner.phone}"></h5>
+        </div>
+        <div class="col-md-3">
+            <div th:each="car:${owner.cars}">
+                <h5 th:text="${car.number}"></h5>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div th:each="job:${owner.jobs}">
+                <h5 th:text="${job.name}"></h5>
+            </div>
+        </div>
+    </div>
 </div>
 <div th:insert="blocks/footer :: footer"></div>
 </body>

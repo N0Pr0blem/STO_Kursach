@@ -13,34 +13,36 @@
 <div th:replace="blocks/admin_panel :: adminPanel(num='1')"></div>
 
 <div class="container py-4 main">
-    <form th:action="@{/admin/service/add}" method="post"
+    <form th:action="@{'/admin/service/'+${job.id}+'/edit'}" method="post"
           style="width:500px;height:100px;margin-left: auto; margin-right: auto;text-align:center;">
         <h1 class="h3 mb-3 fw-normal">Новая услуга</h1>
 
         <div class="form-floating">
-            <input type="text" name="name" class="form-control" placeholder="Name">
+            <input type="text" name="name" th:value="${job.name}" class="form-control" placeholder="Name">
             <label>Название</label>
         </div>
         <br>
         <div class="form-floating">
-            <input type="text" name="cost" class="form-control" placeholder="Price">
+            <input type="text" name="cost" th:value="${job.cost}" class="form-control" placeholder="Price">
             <label>Цена</label>
         </div>
         <br>
         <div class="form-floating">
-            <input type="text" name="warranty" class="form-control" placeholder="Count">
+            <input type="text" name="warranty" th:value="${job.warranty}" class="form-control" placeholder="Count">
             <label>Гарантия</label>
         </div>
         <br>
         <div class="form-floating">
-            <input type="text" name="workTime" class="form-control" placeholder="Company">
+            <input type="text" name="workTime" th:value="${job.workTime}" class="form-control" placeholder="Company">
             <label>Время работы</label>
         </div>
         <br>
         <div class="form-floating">
-            <input type="file" name="image">
+            <input type="text" style="display:none" name="image" th:value="${job.image}">
+            <p>Изменить картинку</p>
+            <input type="file" name="newImage">
         </div>
-        <input type="text" name="isChecked" value="0" style="display:none">
+        <input type="text" name="isChecked" th:value="${job.isChecked}" style="display:none">
         <br>
         <button class="btn btn-outline-dark w-100 py-2" type="submit">Добавить</button>
     </form>

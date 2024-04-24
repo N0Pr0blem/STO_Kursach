@@ -22,18 +22,24 @@
         </div>
         <div class="col-md-10 ">
             <h2 th:text="${category.name}"></h2>
-            <div class="row col-md-9 row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="row col-md-9 row-cols-1 row-cols-2 row-cols-3 g-3">
                 <div class="col" th:each="job : ${category.jobs}">
-                    <div class="card shadow-sm">
+                    <div class="card card-job shadow-sm">
                         <div class="image-container">
-                            <a class="card-image" th:href="'/service/'+${job.id}">
-                                <img class="bd-placeholder-img card-img-top" th:src="@{/images/'+${job.image}+'.png'}"
+                            <div class="card-image">
+                                <img class="bd-placeholder-img card-img-top" th:src="@{'/static/images/'}+${job.image}"
                                      alt="Image">
-                            </a>
+                            </div>
                         </div>
                         <div class="card-body">
-                            <h6 th:text="${job.name}"></h6>
+                            <span th:text="${job.name}"></span><br>
+                            <span th:text="'Гарантия '+${job.warranty}+' дн.'"></span>
+                            <span th:text="'Время '+${job.workTime}+' ч.'"></span>
+                            <span th:text="'Цена '+${job.cost}+'BYN'"></span>
                         </div>
+                        <form th:action="@{'/task/'+${job.id}}" method="get">
+                            <button class="btn btn-success" type="submit">Заказать</button>
+                        </form>
                     </div>
                 </div>
             </div>

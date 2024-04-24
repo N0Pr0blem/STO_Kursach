@@ -8,8 +8,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 @Service
 public class CategoryService {
@@ -17,8 +15,9 @@ public class CategoryService {
     CategoryRepo categoryRepo;
     @Autowired
     JobService jobService;
+
     public ArrayList<Category> getAll() {
-        return (ArrayList<Category>)categoryRepo.findAll();
+        return (ArrayList<Category>) categoryRepo.findAll();
     }
 
     public void add(Category category, List<Job> jobs) {
@@ -38,5 +37,25 @@ public class CategoryService {
 
     public Category getByPath(String path) {
         return categoryRepo.findByPath(path);
+    }
+
+    public void delete(Job job) {
+        ArrayList<Category> categories = findByJob(job);
+        if (!categories.isEmpty()) {
+            for (Category category : categories) {
+                category.getJobs().remove(job);
+                categoryRepo.save(category);
+            }
+        }
+        jobService.delete(job);
+    }
+
+    private ArrayList<Category> findByJob(Job job) {
+        ArrayList<Category> all =(ArrayList<Category>) categoryRepo.findAll();
+        ArrayList<Category> res = new ArrayList<>();
+        for(Category category : all)
+            if(category.getJobs().contains(job))
+                res.add(category);
+        return res;
     }
 }

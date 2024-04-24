@@ -25,9 +25,7 @@ public class JobService {
         }
     }
 
-    public void delete(Job job) {
-        jobRepo.delete(job);
-    }
+
     public ArrayList<Job> getAllUnChecked(){
         ArrayList<Job> all = getAll();
         ArrayList<Job> res = new ArrayList<>();
@@ -42,5 +40,21 @@ public class JobService {
             jobFromDB.setChecked(true);
             jobRepo.save(jobFromDB);
         }
+    }
+
+    public void update(Job job, String name, Double cost, int warranty, int workTime, String image, String newImage, boolean isChecked) {
+        Job jobFromDB = jobRepo.findByName(job.getName());
+        jobFromDB.setName(name);
+        jobFromDB.setCost(cost);
+        jobFromDB.setWarranty(warranty);
+        jobFromDB.setWorkTime(workTime);
+        if(newImage.isEmpty()) jobFromDB.setImage(image);
+        else jobFromDB.setImage(newImage);
+        jobFromDB.setChecked(isChecked);
+        jobRepo.save(jobFromDB);
+    }
+
+    public void delete(Job job) {
+        jobRepo.delete(job);
     }
 }
