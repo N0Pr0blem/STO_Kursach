@@ -11,14 +11,14 @@ public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @OneToOne
+    @Enumerated(EnumType.STRING)
     private Brand brand;
-    private Integer number;
+    private String number;
 
     public Car() {
     }
 
-    public Car(Brand brand, Integer number) {
+    public Car(Brand brand, String number) {
         this.brand = brand;
         this.number = number;
     }

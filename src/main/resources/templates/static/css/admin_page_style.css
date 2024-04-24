@@ -1,0 +1,14 @@
+.my-container{
+    margin-top:10px;
+}
+.form-container{
+    display:flex;
+}
+.form-container form{
+    margin-right:10px;
+}
+.link-column{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}

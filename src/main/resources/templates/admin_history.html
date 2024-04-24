@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Админка</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/header_style.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/admin_panel_style.css}"/>
+</head>
+<body>
+<div th:insert="blocks/header::header"></div>
+<div th:replace="blocks/admin_panel :: adminPanel(num='3')"></div>
+
+<div class="container py-4 main">
+    <h1>История</h1>
+    <div class="row">
+        <div class="col-md-3"><h4>Имя заказчика</h4></div>
+        <div class="col-md-3"><h4>Телефон заказчика</h4></div>
+        <div class="col-md-3"><h4>Номер машины</h4></div>
+        <div class="col-md-3"><h4>Услуга</h4></div>
+    </div>
+    <div th:each="owner:${owners}" class="row">
+        <div class="col-md-3">
+            <div th:text="${owner.name}"></div>
+        </div>
+        <div class="col-md-3">
+            <div th:text="${owner.phone}"></div>
+        </div>
+        <div class="col-md-3">
+            <div th:each="car:${owner.cars}">
+                <div th:text="${car.number}"></div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div th:each="job:${owner.jobs}">
+                <div th:text="${job.name}"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:insert="blocks/footer :: footer"></div>
+</body>
+</html>

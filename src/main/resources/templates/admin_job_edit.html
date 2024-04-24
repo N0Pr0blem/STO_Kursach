@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Админка</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/header_style.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/static/css/admin_panel_style.css}"/>
+</head>
+<body>
+<div th:insert="blocks/header::header"></div>
+<div th:replace="blocks/admin_panel :: adminPanel(num='1')"></div>
+
+<div class="container py-4 main">
+    <form th:action="@{'/admin/service/'+${job.id}+'/edit'}" method="post"
+          style="width:500px;height:100px;margin-left: auto; margin-right: auto;text-align:center;">
+        <h1 class="h3 mb-3 fw-normal">Изменить услугу</h1>
+
+        <div class="form-floating">
+            <input type="text" name="name" th:value="${job.name}" class="form-control" placeholder="Name">
+            <label>Название</label>
+        </div>
+        <br>
+        <div class="form-floating">
+            <input type="text" name="cost" th:value="${job.cost}" class="form-control" placeholder="Price">
+            <label>Цена</label>
+        </div>
+        <br>
+        <div class="form-floating">
+            <input type="text" name="warranty" th:value="${job.warranty}" class="form-control" placeholder="Count">
+            <label>Гарантия</label>
+        </div>
+        <br>
+        <div class="form-floating">
+            <input type="text" name="workTime" th:value="${job.workTime}" class="form-control" placeholder="Company">
+            <label>Время работы</label>
+        </div>
+        <br>
+        <div class="form-floating">
+            <input type="text" style="display:none" name="image" th:value="${job.image}">
+            <p>Изменить картинку</p>
+            <input type="file" name="newImage">
+        </div>
+        <input type="text" name="isChecked" th:value="${job.isChecked}" style="display:none">
+        <br>
+        <button class="btn btn-outline-dark w-100 py-2" type="submit">Изменить</button>
+    </form>
+</div>
+<div th:insert="blocks/footer :: footer"></div>
+</body>
+</html>
