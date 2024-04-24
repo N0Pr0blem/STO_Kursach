@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.main-add{
+    text-align:center;
+    padding:50px;
+}
+.main-add img{
+    width:80%;
+    border-radius: 20px;
+}
+h1{
+    text-align:center;
+}
+span{
+    white-space: pre;
+}
+.card-body{
+    padding:15px;
+}
+
+.card-job{
+    height:430px;
+    width:100%;
+}
+.card-image{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-size: cover;
+    display: flex;
+    line-height: 0;
+    justify-content: center;
+    align-items: center;
+}
+.card-image img{
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    padding:0px;
+}
+.image-container{
+    height:250px;
+}
+.card-job button{
+    width:100%;
+}

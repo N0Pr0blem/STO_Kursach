@@ -1,0 +1,9 @@
+<div th:fragment="adminPanel (num)">
+    <header class="d-flex justify-content-center py-3">
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="/admin/service" th:class="${num == '1'} ? 'nav-link active' : 'nav-link'">Услуги</a></li>
+            <li class="nav-item"><a href="/admin/category" th:class="${num == '2'} ? 'nav-link active' : 'nav-link'">Категории</a></li>
+            <li class="nav-item"><a href="/admin/history" th:class="${num == '3'} ? 'nav-link active' : 'nav-link'">Заказы</a></li>
+        </ul>
+    </header>
+</div>
