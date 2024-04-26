@@ -22,11 +22,12 @@ public class Category {
 
     public Category() {
     }
+
     public Category(String name) {
         this.name = name;
     }
 
     public void setJobsChecked(boolean flag) {
-        for(Job job:jobs) job.setChecked(flag);
+        for (Job job : jobs) job.setChecked(flag);
     }
 }

@@ -16,8 +16,8 @@ public class CategoryController {
     @GetMapping("/{path}")
     public String categoryPage(@PathVariable String path, Model model) {
         Category category = categoryService.getByPath(path);
-        model.addAttribute("category",category);
-        model.addAttribute("categories",categoryService.getAll());
+        model.addAttribute("category", category);
+        model.addAttribute("categories", categoryService.getAll());
         return "category";
     }
 }

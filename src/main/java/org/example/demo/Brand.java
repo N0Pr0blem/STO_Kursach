@@ -1,6 +1,5 @@
 package org.example.demo;
 
-public enum Brand
-{
+public enum Brand {
     NISSAN, KIA, HYUNDAI, VOLVO, MITSUBISHI, VOLKSWAGEN, MAZDA, AUDI, BMW, FORD, TOYOTA, CITROEN, PEUGEOT, RENAULT, OPEL, SKODA, MERCEDES;
 }

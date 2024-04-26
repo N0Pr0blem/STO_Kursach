@@ -81,6 +81,12 @@
             <version>7.8.0</version>
             <scope>compile</scope>
         </dependency>
+        <!--Проверка на число строки-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.13.0</version>
+        </dependency>
     </dependencies>
 
     <build>

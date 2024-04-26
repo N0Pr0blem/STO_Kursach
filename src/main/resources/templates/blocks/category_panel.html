@@ -3,6 +3,7 @@
         Категории
     </a>
     <div th:each="category:${categories}">
-        <a th:href="@{'/category/'+${category.path}}" th:text="${category.name}" class="list-group-item list-group-item-action"></a>
+        <a th:href="@{'/category/'+${category.path}}" th:text="${category.name}"
+           class="list-group-item list-group-item-action"></a>
     </div>
 </div>

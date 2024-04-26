@@ -10,17 +10,20 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
     @Autowired
     CategoryService categoryService;
+
     @GetMapping("/")
-    public String redirectToHomePage(){
+    public String redirectToHomePage() {
         return "redirect:/home";
     }
+
     @GetMapping("/home")
-    public String homePage(Model model){
-        model.addAttribute("categories",categoryService.getAll());
+    public String homePage(Model model) {
+        model.addAttribute("categories", categoryService.getAll());
         return "home";
     }
+
     @GetMapping("/demo")
-    public String demoPage(){
+    public String demoPage() {
         return "demo";
     }
 }

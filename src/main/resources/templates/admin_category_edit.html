@@ -14,9 +14,10 @@
 
 <div class="container py-4 main">
     <form th:action="@{'/admin/category/'+${category.id}+'/edit'}" method="post"
-          style="width:500px;height:100px;margin-left: auto; margin-right: auto;text-align:center;">
+          style="width:500px;height:100px;margin-left: auto; margin-right: auto;text-align:center;"
+          onsubmit="return validateForm()">
         <h1 class="h3 mb-3 fw-normal">Изменить категорию</h1>
-
+        <div th:text="${message}" style="color:darkred"></div>
         <div class="form-floating">
             <input type="text" name="name" class="form-control" th:value="${category.name}" placeholder="Name">
             <label>Название</label>
@@ -25,14 +26,26 @@
         <div th:each="job:${category.jobs}">
             <input class="form-check-input" type="checkbox" id="flexCheckDefault1" checked
                    name="categoryJobs" th:value="${job.id}" th:text="${job.name}">
-        </div><br>
+        </div>
+        <br>
         <div th:each="job:${jobs}">
             <input class="form-check-input" type="checkbox" id="flexCheckDefault2"
                    name="categoryJobs" th:value="${job.id}" th:text="${job.name}">
-        </div><br>
+        </div>
+        <br>
         <button class="btn btn-outline-dark w-100 py-2" type="submit">Изменить</button>
     </form>
 </div>
 <div th:insert="blocks/footer :: footer"></div>
+<script>
+    function validateForm() {
+        var checkboxes = document.querySelectorAll('input[name="categoryJobs"]:checked');
+        if (checkboxes.length === 0) {
+            alert('Пожалуйста, выберите хотя бы одну услугу.');
+            return false;
+        }
+        return true;
+    }
+</script>
 </body>
 </html>
