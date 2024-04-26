@@ -4,15 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddd14e17-0cf5-48e4-9749-be59b42d0655" name="Changes" comment="mvp">
+    <list default="true" id="ddd14e17-0cf5-48e4-9749-be59b42d0655" name="Changes" comment="pull">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/exception/DuplicateException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/exception/InputException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controller/TaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/Brand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/Brand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/demo/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/demo/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/CarRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/CarRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/CategoryRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/CategoryRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/JobRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/JobRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/OwnerRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/OwnerRepo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin_category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin_history.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin_history.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/static/css/main_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/static/css/main_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/JobService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/JobService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/PathGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/PathGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/service/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/service/TaskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin_category_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin_category_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin_category_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin_category_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin_job_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin_job_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin_job_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin_job_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blocks/admin_panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blocks/admin_panel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blocks/category_panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blocks/category_panel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blocks/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blocks/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blocks/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blocks/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/task_creator.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/task_creator.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,11 +43,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
-        <option value="Interface" />
-        <option value="Enum" />
         <option value="Class" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -42,31 +59,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "workBranch",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Code/Java/STO_Kursach/src/main/resources"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;validation&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="org.example.controller" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Code\Java\STO_Kursach\src\main\resources" />
-      <recent name="D:\Code\Java\STO_Kursach\src\main\java\org\example\config" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Code\Java\STO_Kursach\src\main\resources\templates" />
-      <recent name="D:\Code\Java\STO_Kursach\src\main\resources\templates\static" />
       <recent name="D:\Code\Java\STO_Kursach\src\main\resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.example.service" />
     </key>
   </component>
   <component name="RunManager">
@@ -111,82 +113,11 @@
       <option name="presentableId" value="Default" />
       <updated>1713268076140</updated>
     </task>
-    <task id="LOCAL-00001" summary="first commit">
-      <option name="closed" value="true" />
-      <created>1713275511607</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1713275511607</updated>
-    </task>
-    <task id="LOCAL-00002" summary="configure security">
-      <option name="closed" value="true" />
-      <created>1713275974507</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1713275974507</updated>
-    </task>
-    <task id="LOCAL-00003" summary="beautiful homepage">
-      <option name="closed" value="true" />
-      <created>1713293206797</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1713293206797</updated>
-    </task>
-    <task id="LOCAL-00004" summary="base admin panel">
-      <option name="closed" value="true" />
-      <created>1713454655430</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1713454655431</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Create services">
-      <option name="closed" value="true" />
-      <created>1713519676567</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1713519676567</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Category and jobs creating">
-      <option name="closed" value="true" />
-      <created>1713888089178</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1713888089178</updated>
-    </task>
-    <task id="LOCAL-00007" summary="edit categories and jobs, output all tasks">
-      <option name="closed" value="true" />
-      <created>1713972417712</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1713972417712</updated>
-    </task>
-    <task id="LOCAL-00008" summary="mvp">
-      <option name="closed" value="true" />
-      <created>1713977006307</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1713977006307</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="first commit" />
-    <MESSAGE value="configure security" />
-    <MESSAGE value="beautiful homepage" />
-    <MESSAGE value="base admin panel" />
-    <MESSAGE value="Create services" />
-    <MESSAGE value="Category and jobs creating" />
-    <MESSAGE value="edit categories and jobs, output all tasks" />
-    <MESSAGE value="mvp" />
-    <option name="LAST_COMMIT_MESSAGE" value="mvp" />
+    <MESSAGE value="???" />
+    <MESSAGE value="pull" />
+    <option name="LAST_COMMIT_MESSAGE" value="pull" />
   </component>
 </project>

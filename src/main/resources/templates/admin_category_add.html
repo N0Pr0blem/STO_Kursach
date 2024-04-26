@@ -14,9 +14,9 @@
 
 <div class="container py-4 main">
     <form th:action="@{/admin/category/add}" method="post"
-          style="width:500px;height:100px;margin-left: auto; margin-right: auto;text-align:center;">
+          style="width:500px;height:100px;margin-left: auto; margin-right: auto;text-align:center;" onsubmit="return validateForm()">
         <h1 class="h3 mb-3 fw-normal">Новая категория</h1>
-
+        <div th:text="${message}" style="color:darkred"></div>
         <div class="form-floating">
             <input type="text" name="name" class="form-control" placeholder="Name">
             <label>Название</label>
@@ -30,5 +30,15 @@
     </form>
 </div>
 <div th:insert="blocks/footer :: footer"></div>
+<script>
+    function validateForm() {
+        var checkboxes = document.querySelectorAll('input[name="categoryJobs"]:checked');
+        if (checkboxes.length === 0) {
+            alert('Пожалуйста, выберите хотя бы одну услугу.');
+            return false;
+        }
+        return true;
+    }
+</script>
 </body>
 </html>

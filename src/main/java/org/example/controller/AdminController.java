@@ -1,10 +1,15 @@
 package org.example.controller;
 
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.example.demo.Category;
 import org.example.demo.Job;
+import org.example.exception.DuplicateException;
+import org.example.exception.InputException;
 import org.example.service.CategoryService;
 import org.example.service.JobService;
 import org.example.service.OwnerService;
+import org.example.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,6 +27,7 @@ public class AdminController {
     CategoryService categoryService;
     @Autowired
     OwnerService ownerService;
+    Logger logger = LogManager.getLogger(TaskService.class);
 
     @GetMapping()
     public String mainPage() {
@@ -45,9 +51,22 @@ public class AdminController {
     }
 
     @PostMapping("/service/add")
-    public String serviceAdd(Job job, Model model) {
-        jobService.add(job);
-        return "redirect:/admin/service/add";
+    public String serviceAdd(
+            String name,
+            String cost,
+            String warranty,
+            String workTime,
+            String image,
+            Model model
+    ) throws DuplicateException, InputException {
+        try {
+            jobService.add(name, cost, warranty, workTime, image);
+            return "redirect:/admin/service/add";
+        } catch (DuplicateException | InputException ex) {
+            model.addAttribute(ex.getMessage());
+            return "admin_job_add";
+        }
+
     }
 
     @PostMapping("/service/{job}/delete")
@@ -55,9 +74,10 @@ public class AdminController {
         categoryService.delete(job);
         return "redirect:/admin/service";
     }
+
     @GetMapping("/service/{job}/edit")
-    public String serviceEditPage(@PathVariable Job job, Model model){
-        model.addAttribute("job",job);
+    public String serviceEditPage(@PathVariable Job job, Model model) {
+        model.addAttribute("job", job);
         return "admin_job_edit";
     }
 
@@ -65,15 +85,22 @@ public class AdminController {
     public String serviceEdit(
             @PathVariable Job job,
             @RequestParam String name,
-            @RequestParam Double cost,
-            @RequestParam int warranty,
-            @RequestParam int workTime,
+            @RequestParam String cost,
+            @RequestParam String warranty,
+            @RequestParam String workTime,
             @RequestParam String image,
             @RequestParam String newImage,
-            @RequestParam boolean isChecked
-    ) {
-        jobService.update(job, name, cost, warranty, workTime, image,newImage, isChecked);
-        return "redirect:/admin/service";
+            @RequestParam boolean isChecked,
+            Model model
+    ) throws InputException, DuplicateException {
+        try {
+            jobService.update(job, name, cost, warranty, workTime, image, newImage, isChecked);
+            return "redirect:/admin/service";
+        } catch (InputException | DuplicateException ex) {
+            model.addAttribute("message", ex.getMessage());
+            model.addAttribute("job", job);
+            return "admin_job_edit";
+        }
     }
 
     @GetMapping("/category")
@@ -96,13 +123,20 @@ public class AdminController {
     @PostMapping("/category/add")
     public String categoryAdd(
             @RequestParam("categoryJobs") List<Job> selectedJobs,
-            Category category,
+            @RequestParam String name,
             Model model) {
-        categoryService.add(category, selectedJobs);
-        return "redirect:/admin/category/add";
+        try {
+            categoryService.add(name, selectedJobs);
+            return "redirect:/admin/category/add";
+        } catch (DuplicateException | InputException ex) {
+            model.addAttribute("message", ex.getMessage());
+        }
+        model.addAttribute("jobs", jobService.getAllUnChecked());
+        return "admin_category_add";
     }
+
     @GetMapping("/category/{category}/edit")
-    public String categoryEditPage(@PathVariable Category category,Model model) {
+    public String categoryEditPage(@PathVariable Category category, Model model) {
         model.addAttribute("jobs", jobService.getAllUnChecked());
         model.addAttribute("category", category);
         return "admin_category_edit";
@@ -112,9 +146,18 @@ public class AdminController {
     public String categoryEdit(
             @RequestParam("categoryJobs") List<Job> selectedJobs,
             @PathVariable Category category,
+            @RequestParam String name,
             Model model) {
-        categoryService.edit(category, selectedJobs);
-        return "redirect:/admin/category";
+        try {
+            logger.info(selectedJobs.size());
+            categoryService.edit(category, name, selectedJobs);
+            return "redirect:/admin/category";
+        } catch (InputException ex) {
+            model.addAttribute("message", ex.getMessage());
+            model.addAttribute("jobs", jobService.getAllUnChecked());
+            model.addAttribute("category", category);
+            return "admin_category_edit";
+        }
     }
 
     @PostMapping("/category/{category}/delete")

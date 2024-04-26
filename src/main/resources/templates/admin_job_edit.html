@@ -16,7 +16,7 @@
     <form th:action="@{'/admin/service/'+${job.id}+'/edit'}" method="post"
           style="width:500px;height:100px;margin-left: auto; margin-right: auto;text-align:center;">
         <h1 class="h3 mb-3 fw-normal">Изменить услугу</h1>
-
+        <div th:text="${message}" style="color:darkred"></div>
         <div class="form-floating">
             <input type="text" name="name" th:value="${job.name}" class="form-control" placeholder="Name">
             <label>Название</label>
